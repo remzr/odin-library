@@ -1,5 +1,6 @@
 const myLibrary = [];
 
+// Create a book object
 function Book(author, title, pages ) {
     this.author = author;
     this.title = title;
@@ -7,11 +8,13 @@ function Book(author, title, pages ) {
     this.id = crypto.randomUUID();
 }
 
+// Add books to library
 function addBookToLibrary(author, title, pages) {
     const newBook = new Book(author, title, pages);
     return(myLibrary.push(newBook));  
 }
 
+// Show library as table in frontend
 function displayLibrary() {
     const tableElement = document.querySelector(".library-display");
 
