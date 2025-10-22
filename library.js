@@ -7,10 +7,15 @@ function Book(author, title, pages ) {
     this.id = crypto.randomUUID();
 }
 
-function addBookToLibrary() {
-    //take Params, creat a book then store it in the array
+function addBookToLibrary(author, title, pages) {
+    const newBook = new Book(author, title, pages);
+    return(myLibrary.push(newBook));  
 }
 
-const book1 = new Book("John Smith", "How to code", 320);
+addBookToLibrary("John Smith", "How to code", 320);
+addBookToLibrary("J.K. Rowling", "Harry Potter 1", 413);
+addBookToLibrary("Robert W. Chambers", "The King in Yellow", 310);
+addBookToLibrary("Paolo Coelho", "Nathan the wise", 230);
 
-console.log(book1);
+
+console.log([myLibrary]);
