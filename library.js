@@ -21,8 +21,8 @@ function displayLibrary() {
     myLibrary.map(item => {
         tableElement.insertAdjacentHTML("beforeend",`
         <tr>
-            <td>${item.author}</td>
             <td>${item.title}</td>
+            <td>${item.author}</td>
             <td>${item.pages}</td>
         </tr>      
         `);

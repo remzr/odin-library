@@ -1,12 +1,49 @@
 body {
     padding: 40px;
+    display: flex;
+    gap: 60px;
+    justify-content: center;
 }
 
-h1, p, tr, td, th {
+h1, p, tr, td, th , form{
     font-family: Arial, Helvetica, sans-serif;
     text-align: left;
 }
 
 .library-display {
     width: 800px;
+}
+
+main {
+    margin-top: 100px;
+}
+
+fieldset {
+    margin-bottom: 24px;
+    padding: 16px;
+    border-radius: 8px;
+    width: 400px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+label {
+    font-size: 0.8rem;
+}
+
+#add-button {
+    background-color: blueviolet;
+    color: aliceblue;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 800;
+}
+
+td {
+    border-top: 1px solid blueviolet;
 }
