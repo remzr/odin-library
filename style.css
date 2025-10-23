@@ -44,6 +44,18 @@ label {
     font-weight: 800;
 }
 
+.remove-button {
+    font-size: 0.8rem;
+    background-color: white;
+    border: solid 1px blueviolet;
+    color: blueviolet;
+    border-radius: 4px;
+}
+
+.button-row {
+    border: none;
+}
+
 td {
     border-top: 1px solid blueviolet;
 }

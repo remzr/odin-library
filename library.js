@@ -23,10 +23,11 @@ function displayLibrary() {
     myLibrary.map(item => {    
         if (item.stored == false) {    
             tableElement.insertAdjacentHTML("beforeend",`
-            <tr>
+            <tr id=${item.id}>
                 <td class="table-row">${item.title}</td>
                 <td class="table-row">${item.author}</td>
                 <td class="table-row">${item.pages}</td>
+                <td class="button-row"><button class="remove-button value="${item.id}" data-attribute="${item.id}" ">x Remove</button></td>
             </tr>      
             `);
         }
@@ -49,3 +50,18 @@ form.addEventListener("submit", function(e) {
     addBookToLibrary(formData.bookAuthor, formData.bookTitle, formData.bookPages, false);
     displayLibrary("new");
 });
+
+//Event listener for delete button
+document.addEventListener("click", function(e){
+  const target = e.target.closest(".remove-button"); // Or any other selector.
+
+  if(target){
+    removeBookById(target.dataset.attribute);
+  }
+});
+
+//Removes a single book from the display and library
+function removeBookById(id) {
+    const tableElement = document.getElementById(`${id}`);
+    tableElement.remove();
+};
