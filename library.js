@@ -1,13 +1,23 @@
 const myLibrary = [];
 
 // Create a book object
-function Book(author, title, pages, stored) {
+/*function Book(author, title, pages, stored) {
     this.author = author;
     this.title = title;
     this.pages = pages;
     this.stored = stored;
     this.id = crypto.randomUUID();
-};
+}; */
+
+class Book {
+    constructor(author, title, pages, stored) {
+        this.author = author;
+        this.title = title;
+        this.pages = pages;
+        this.stored = stored;
+        this.id = crypto.randomUUID();
+    }
+}
 
 // Add books to library
 function addBookToLibrary(author, title, pages, stored) {
